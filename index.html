@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Permanent+Marker" >
+    <link rel="stylesheet" href="./styless.css">
+    <title>Memory Game Javascript</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Memory Game</h1>
+        </header>
+        <section class="head-game">
+            <div><span class="moves">0</span> Moves</div>
+            <div class="timer">
+            </div>
+            <button class="restart" onclick="playAgain()">
+                Reset
+        		<i class="fa fa-repeat"></i>
+            </button>
+        </section>
+        <section class="main-game">
+            <ul class="deck" id="card-deck">
+            </ul>
+        </section>
+        <div class="end-game" id="modal-show">
+            <div class="popup"> 
+                <div class="close-div">
+                    <button class="close-btn" onclick="playAgain()">x</button>
+                </div>
+                <h2>Congratulations 🎉</h2>
+                <div class="message">
+                    <p>you're a winner</p>
+                </div>
+                <div class="message-score">
+                    <p>you made <span id="number-moves"></span> moves</p>
+                    <p>in <span id="time-game"></span></p>
+                </div>
+                <button id="play-again" onclick="playAgain()">play again</button>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
